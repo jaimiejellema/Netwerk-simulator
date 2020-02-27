@@ -1,0 +1,17 @@
+This software was created while working on my bachelor
+
+A server application emulates a peer to peer network, while in reality it's client-server.
+
+First message client is unique identifier (currently just numbers 1,2,3,4, etc.
+This message is used by server to map network connections to clients.
+
+After this the peer to peer discovery and connection protocols start.
+All routing will be link state routing, due to the small size of the network.
+https://en.wikipedia.org/wiki/Link-state_routing_protocol
+
+Routing is two step process.
+Pings to determine connectivty
+Broadcast connectivity data to all nodes in network
+Use connectivity data to route application packets
+It uses a variantion/partial implementation of TCP for reliable data transfer
+
